@@ -38,3 +38,83 @@
 3. Experience with Git, Jenkins and DevOps
 4. Objectives for the class
 
+---
+
+## Basic Command
+
+* config
+* init
+* add 
+* commit
+  * commit -m "message"
+  * commit -a  // does and add and commit for modified
+  * commit -am "xxx" 
+  * commit -a -m "xx"
+* status
+* log
+
+## Commits best practices
+
+- Atomic commits
+- change that does one thing
+  - bug fix
+  - feature add
+  - "Fixes bug 453"  "Corrects typos in docs"
+
+---
+
+## Working with the repo
+
+#### Undoing adds
+
+* Moving files from the repository into your working directory
+* Add file moves changes to the staging are 
+  * restore --staged file  removes changes from the staging area
+  * leaves your working copy intact
+
+### Restoring from repo
+* Copies the file from the repo and OVEWRITES your working copy
+* git restore filename
+
+### Lab
+
+* Create a repository
+* Create and add a file and commit
+* Edit the file
+* Display in the file
+* Git add file
+  * git status to confirm
+  * git restore --staged file
+  * git status 
+
+* Edit the file
+* display to see edits
+* get restore file
+* confirm the edits are gone
+
+
+### Deleting from the Repo
+* git rm file
+* git mv to rename or move a new directory
+
+### LAb
+
+* create a branch
+  * git branch branch-name
+  * git checkout -b branchname
+  * git checkout branchname
+  * git status shows you the branch you are on
+  * git log --oneline --graph --decorate --all
+* make a commit on the new branch
+* see how the log display changes
+* switch back and forth 
+
+---
+
+## Fast Forward
+
+make some changes on the branch
+do a commit 
+switch back to the master branch
+do a merge "git merge testing"
+delete your other branch
